@@ -1,0 +1,1 @@
+- [ ] Fix stuck loading: build app with instant local demo data (done: shell, dashboard, all routes)
