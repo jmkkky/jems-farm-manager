@@ -10,33 +10,193 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BreedingRouteImport } from './routes/breeding'
+import { Route as BreedsRouteImport } from './routes/breeds'
+import { Route as EggsRouteImport } from './routes/eggs'
+import { Route as FeedRouteImport } from './routes/feed'
+import { Route as FinanceRouteImport } from './routes/finance'
+import { Route as FlocksRouteImport } from './routes/flocks'
+import { Route as GrowthRouteImport } from './routes/growth'
+import { Route as HealthRouteImport } from './routes/health'
+import { Route as RemindersRouteImport } from './routes/reminders'
+import { Route as ReportsRouteImport } from './routes/reports'
+import { Route as SettingsRouteImport } from './routes/settings'
+import { Route as VaccinationsRouteImport } from './routes/vaccinations'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BreedingRoute = BreedingRouteImport.update({
+  id: '/breeding',
+  path: '/breeding',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BreedsRoute = BreedsRouteImport.update({
+  id: '/breeds',
+  path: '/breeds',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EggsRoute = EggsRouteImport.update({
+  id: '/eggs',
+  path: '/eggs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FeedRoute = FeedRouteImport.update({
+  id: '/feed',
+  path: '/feed',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinanceRoute = FinanceRouteImport.update({
+  id: '/finance',
+  path: '/finance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FlocksRoute = FlocksRouteImport.update({
+  id: '/flocks',
+  path: '/flocks',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GrowthRoute = GrowthRouteImport.update({
+  id: '/growth',
+  path: '/growth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HealthRoute = HealthRouteImport.update({
+  id: '/health',
+  path: '/health',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RemindersRoute = RemindersRouteImport.update({
+  id: '/reminders',
+  path: '/reminders',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReportsRoute = ReportsRouteImport.update({
+  id: '/reports',
+  path: '/reports',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VaccinationsRoute = VaccinationsRouteImport.update({
+  id: '/vaccinations',
+  path: '/vaccinations',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/breeding': typeof BreedingRoute
+  '/breeds': typeof BreedsRoute
+  '/eggs': typeof EggsRoute
+  '/feed': typeof FeedRoute
+  '/finance': typeof FinanceRoute
+  '/flocks': typeof FlocksRoute
+  '/growth': typeof GrowthRoute
+  '/health': typeof HealthRoute
+  '/reminders': typeof RemindersRoute
+  '/reports': typeof ReportsRoute
+  '/settings': typeof SettingsRoute
+  '/vaccinations': typeof VaccinationsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/breeding': typeof BreedingRoute
+  '/breeds': typeof BreedsRoute
+  '/eggs': typeof EggsRoute
+  '/feed': typeof FeedRoute
+  '/finance': typeof FinanceRoute
+  '/flocks': typeof FlocksRoute
+  '/growth': typeof GrowthRoute
+  '/health': typeof HealthRoute
+  '/reminders': typeof RemindersRoute
+  '/reports': typeof ReportsRoute
+  '/settings': typeof SettingsRoute
+  '/vaccinations': typeof VaccinationsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/breeding': typeof BreedingRoute
+  '/breeds': typeof BreedsRoute
+  '/eggs': typeof EggsRoute
+  '/feed': typeof FeedRoute
+  '/finance': typeof FinanceRoute
+  '/flocks': typeof FlocksRoute
+  '/growth': typeof GrowthRoute
+  '/health': typeof HealthRoute
+  '/reminders': typeof RemindersRoute
+  '/reports': typeof ReportsRoute
+  '/settings': typeof SettingsRoute
+  '/vaccinations': typeof VaccinationsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/breeding'
+    | '/breeds'
+    | '/eggs'
+    | '/feed'
+    | '/finance'
+    | '/flocks'
+    | '/growth'
+    | '/health'
+    | '/reminders'
+    | '/reports'
+    | '/settings'
+    | '/vaccinations'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/breeding'
+    | '/breeds'
+    | '/eggs'
+    | '/feed'
+    | '/finance'
+    | '/flocks'
+    | '/growth'
+    | '/health'
+    | '/reminders'
+    | '/reports'
+    | '/settings'
+    | '/vaccinations'
+  id:
+    | '__root__'
+    | '/'
+    | '/breeding'
+    | '/breeds'
+    | '/eggs'
+    | '/feed'
+    | '/finance'
+    | '/flocks'
+    | '/growth'
+    | '/health'
+    | '/reminders'
+    | '/reports'
+    | '/settings'
+    | '/vaccinations'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BreedingRoute: typeof BreedingRoute
+  BreedsRoute: typeof BreedsRoute
+  EggsRoute: typeof EggsRoute
+  FeedRoute: typeof FeedRoute
+  FinanceRoute: typeof FinanceRoute
+  FlocksRoute: typeof FlocksRoute
+  GrowthRoute: typeof GrowthRoute
+  HealthRoute: typeof HealthRoute
+  RemindersRoute: typeof RemindersRoute
+  ReportsRoute: typeof ReportsRoute
+  SettingsRoute: typeof SettingsRoute
+  VaccinationsRoute: typeof VaccinationsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +208,107 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/breeding': {
+      id: '/breeding'
+      path: '/breeding'
+      fullPath: '/breeding'
+      preLoaderRoute: typeof BreedingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/breeds': {
+      id: '/breeds'
+      path: '/breeds'
+      fullPath: '/breeds'
+      preLoaderRoute: typeof BreedsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/eggs': {
+      id: '/eggs'
+      path: '/eggs'
+      fullPath: '/eggs'
+      preLoaderRoute: typeof EggsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/feed': {
+      id: '/feed'
+      path: '/feed'
+      fullPath: '/feed'
+      preLoaderRoute: typeof FeedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/finance': {
+      id: '/finance'
+      path: '/finance'
+      fullPath: '/finance'
+      preLoaderRoute: typeof FinanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/flocks': {
+      id: '/flocks'
+      path: '/flocks'
+      fullPath: '/flocks'
+      preLoaderRoute: typeof FlocksRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/growth': {
+      id: '/growth'
+      path: '/growth'
+      fullPath: '/growth'
+      preLoaderRoute: typeof GrowthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/health': {
+      id: '/health'
+      path: '/health'
+      fullPath: '/health'
+      preLoaderRoute: typeof HealthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reminders': {
+      id: '/reminders'
+      path: '/reminders'
+      fullPath: '/reminders'
+      preLoaderRoute: typeof RemindersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reports': {
+      id: '/reports'
+      path: '/reports'
+      fullPath: '/reports'
+      preLoaderRoute: typeof ReportsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/vaccinations': {
+      id: '/vaccinations'
+      path: '/vaccinations'
+      fullPath: '/vaccinations'
+      preLoaderRoute: typeof VaccinationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BreedingRoute: BreedingRoute,
+  BreedsRoute: BreedsRoute,
+  EggsRoute: EggsRoute,
+  FeedRoute: FeedRoute,
+  FinanceRoute: FinanceRoute,
+  FlocksRoute: FlocksRoute,
+  GrowthRoute: GrowthRoute,
+  HealthRoute: HealthRoute,
+  RemindersRoute: RemindersRoute,
+  ReportsRoute: ReportsRoute,
+  SettingsRoute: SettingsRoute,
+  VaccinationsRoute: VaccinationsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
