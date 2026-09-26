@@ -1,1 +1,8 @@
-- [ ] Fix stuck loading: build app with instant local demo data (done: shell, dashboard, all routes)
+- [x] Database: all farm tables, farm membership with Owner/Admin/Staff roles, access rules
+- [x] Email + Google sign-in enabled
+- [ ] Sign-in page, protected pages, farm creation with demo data
+- [ ] Switch app data from browser storage to database (types in src/lib/farm/db-types.ts)
+- [ ] Dashboard KPIs + filters; flocks/movements; breeds/growth; eggs
+- [ ] Health/treatments, vaccination schedules/records, breeding/hatchery
+- [ ] Feed/inventory, finance, reports (CSV/print), reminders, settings
+- [ ] Installable app (manifest/icons), states, final QA

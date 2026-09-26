@@ -1,5 +1,4 @@
 export type SpeciesId = "chicken" | "pigeon" | "guinea" | "turkey" | "duck" | "goose";
-
 export interface Species { id: SpeciesId; name: string; emoji: string; }
 export interface Breed {
   id: string; speciesId: SpeciesId; name: string; purpose: string;
@@ -35,12 +34,9 @@ export interface BreedingGroup {
 }
 export interface FeedItem { id: string; name: string; supplier: string; bagKg: number; pricePerBag: number; stockKg: number; reorderKg: number; }
 export interface FeedTx { id: string; feedId: string; flockId?: string; date: string; type: "Purchase" | "Use" | "Waste"; kg: number; cost?: number; }
-export type ExpenseCat = "Feed" | "Medicine" | "Vaccine" | "Labour" | "Equipment" | "Utilities" | "Birds" | "Other";
-export type IncomeCat = "Egg sales" | "Bird sales" | "Manure" | "Other";
 export interface Money { id: string; kind: "expense" | "income"; date: string; category: string; party: string; speciesId?: SpeciesId; flockId?: string; amount: number; method: string; notes: string; }
 export interface Reminder { id: string; type: "Vaccination" | "Treatment" | "Weighing" | "Egg collection" | "Hatching" | "Reorder"; title: string; dueDate: string; done: boolean; }
 export interface Settings { farmName: string; owner: string; location: string; currency: string; }
-
 export interface FarmData {
   species: Species[]; breeds: Breed[]; housing: Housing[]; flocks: Flock[]; movements: Movement[];
   weights: WeightRecord[]; eggs: EggRecord[]; diseases: Disease[]; health: HealthEvent[];
